@@ -1,3 +1,56 @@
+body {
+    background-color: teal
+}
 h1 {
-    color: aqua;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: xx-large;
+    text-align: center;   
+}
+h2 {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.0;
+}
+label {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: medium;
+    margin-left: 5%;
+}
+input {
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: medium;
+    width: 50%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.boxed {
+    background-color: white;
+    line-height: 3.0;
+}
+select {
+    color: gray;
+    width: 100%;
+    font-size: medium;
+    font-family: "Times New Roman", Times, serif;
+    margin-left: 5%;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

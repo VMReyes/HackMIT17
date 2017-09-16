@@ -13,7 +13,30 @@
   </head>
   <body>
     <div id='main_page'>
-      <h1>Hello!</h1>
-    </div>
+ 
+    <h1>Welcome to Tipsy Tim!</h1>
+   
+    
+    <h2>"Calculate your base BAC and as the night progresses, input the info on the drinks you've had. Know your BAC while already receiving feedback on how long you should wait before your next drink."</h2>
+  <form action="/action_page.php">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" placeholder="Your age...">
+
+    <label for="weight">Weight (lbs):</label>
+    <input type="text" id="weight" name="weight" placeholder="Your weight..">
+
+    <label for="gender">Gender:</label>
+    <div class="boxed">
+      <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+      </div>
+    <div class="button">
+        <input type="submit" value="SUBMIT">
+      </div>
+      
+  </form>
+        </div>
   </body>
 </html>
