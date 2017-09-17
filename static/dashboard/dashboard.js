@@ -6,24 +6,43 @@ function replaceButtons(){
   } else {
     r = 0.68;
   }
-  current_mass += volume * concentration * 0.789;
+  current_mass += volume * concentration * 28.35;
   console.log(volume);
   console.log(concentration);
   console.log(current_mass);
-  bac = 100*3*concentration*volume*0.025/weight;
+  console.log(weight);
+  console.log(r);
+  console.log(hours);
+  bac = ((100*current_mass)/(weight*453.592*r))-(0.015*current_hours);
   console.log(bac);
   $('#BAC').text(Number((bac).toFixed(2))+'%');
-  hours = bac / 0.015 - current_mass / 0.015 / weight / r - current_hours;
-  if (hours >= 0.0167) {
-    //goto timer
+  if (bac >= chosen_bac) {
+    minutes = Math.abs(Math.trunc((chosen_bac-bac)/0.015*60));
+    seconds = Math.trunc((Math.abs((chosen_bac-bac)/0.015) * 60 - minutes)*60);
+    var x = setInterval(startTimer(),100);
+  } else {
+    $('#timer').text('You are under your chosen BAC. Continue to drink responsibly.')
   }
 
+  console.log(hours);
   $('#Buttonsb_top').fadeOut().css('display','none');
   $('#Buttonsb_bot').fadeOut().css('display','none');
   $('#Buttons_bot').fadeIn();
   $('#Buttons_top').fadeIn();
 }
 
+function startTimer(hours){
+
+  console.log(minutes);
+  console.log(seconds);
+  $('#timer').text('Do not drink for '+minutes+' minutes and ' + seconds+ ' seconds.');
+  if (seconds > 0){
+    seconds -= 1;
+  } else {
+    minutes -= 1;
+    seconds = 60;
+  }
+}
 
 function setupHandlers() {
   $('#oneoz').on('click', function(){volume=1.5;switchButtons()});
@@ -56,3 +75,4 @@ var mass = 0.0;
 var weight = 130.0;
 var sex = 'male';
 var current_hours = 0.0;
+var chosen_bac = 0.06;
