@@ -1,13 +1,17 @@
 
 
 function replaceButtons(){
-  if (sex = 'female') {
+  if (sex == 'female') {
     r = 0.55;
   } else {
     r = 0.68;
   }
   current_mass += volume * concentration * 0.789;
-  bac = (current_mass / (weight * r)) - (0.015 * hours);
+  console.log(volume);
+  console.log(concentration);
+  console.log(current_mass);
+  bac = 100*3*concentration*volume*0.025/weight;
+  console.log(bac);
   $('#BAC').text(Number((bac).toFixed(2))+'%');
   hours = bac / 0.015 - current_mass / 0.015 / weight / r - current_hours;
   if (hours >= 0.0167) {
