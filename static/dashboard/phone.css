@@ -19,13 +19,13 @@ body {
   margin-top: 5px;
   font-size: 25px;
 }
-#Buttons_top {
+#Buttons_top,#Buttonsb_top {
   margin-top: 45%;
   display: flex;
   width: 100%;
   margin-bottom: 3%;
 }
- #Buttons_bot {
+ #Buttons_bot,#Buttonsb_bot {
    display: flex;
    width: 100%;
  }
