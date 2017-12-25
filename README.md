@@ -1,5 +1,5 @@
-# victorreyes
-My personal website.
+# tipsy TIM
+HackMIT 2017 project
 
-This website can only be run on Google's App Engine. 
-It can run on regular HTML if it is reverted back from the commmit that fixed App Engine.
+Aimed at reducing binge drinking on college campuses by providing a discreet and easy way to count drinks.
+App focused on usability even if the user is inebriated.
